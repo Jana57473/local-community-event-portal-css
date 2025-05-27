@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Community Event Portal - CSS3 Exercises</title>
+  <!-- Google Fonts for Typography Exercise -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+  <!-- Internal CSS for body background (Exercise 1.2) -->
+  <style>
+    body {
+      background-color: #f5f7fa;
+      color: rgba(44, 62, 80, 0.95);
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+
+  <!-- Simulated External CSS (styles.css) -->
+  <style>
+    /* ================================
+       1. Header styles
+    ================================ */
+    #mainHeader {
+      background: #004080;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ================================
+       2. Event Card styles
+    ================================ */
+    .eventCard {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 1rem 0;
+      padding: 1.5rem;
+      border: 1px solid #eee;
+    }
+
+    /* ================================
+       3. CTA Button styles
+    ================================ */
+    .cta-button {
+      background-color: #007BFF;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    /* ================================
+       4. Selectors Playground
+    ================================ */
+    /* Universal selector: reset margin & padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Element selector */
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 0.5em;
+    }
+    /* ID selector for main header already above */
+    /* Class selector for eventCard already above */
+    /* Group selector */
+    h3, p {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #333;
+    }
+
+    /* ================================
+       5. Color & Background Styling
+    ================================ */
+    /* Gradient for section headers */
+    .section-header {
+      background: linear-gradient(90deg, #004080 0%, #00bfff 100%);
+      color: white;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* ================================
+       6. Typography
+    ================================ */
+    .description {
+      font-style: italic;
+      text-align: justify;
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
+
+    /* ================================
+       7. Link and List Styling
+    ================================ */
+    a:link    { color: #007BFF; text-decoration: none; }
+    a:visited { color: #6610f2; }
+    a:hover   { color: #0056b3; text-decoration: underline; }
+    a:active  { color: #ff5722; }
+
+    ul {
+      list-style-type: square;
+      list-style-position: inside;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 1.5rem;
+      padding: 0.5rem 0;
+    }
+
+    /* ================================
+       8. Table Styling
+    ================================ */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      background: #fff;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    th {
+      background: #004080;
+      color: white;
+    }
+
+    /* ================================
+       9. Box Model & Layout Control
+    ================================ */
+    .eventCard {
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+    /* Outline for selected form fields */
+    input:focus, select:focus {
+      outline: 2px solid #00bfff;
+    }
+    /* Visibility vs display */
+    .hide {
+      display: none;
+    }
+    .invisible {
+      visibility: hidden;
+    }
+
+    /* ================================
+       10. Multiple Columns in Text
+    ================================ */
+    .news-article {
+      column-count: 2;
+      column-gap: 30px;
+      column-rule: 1px solid gray;
+      padding: 1rem;
+      background: #fff;
+      margin-bottom: 2rem;
+    }
+
+    /* ================================
+       11. Responsive Web Design
+    ================================ */
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      .eventCard, .news-article, table {
+        font-size: 90%;
+        padding: 0.5rem;
+      }
+      img {
+        max-width: 90vw;
+        height: auto;
+      }
+      .section-header {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Inline style example (Exercise 1.1) -->
+  <h1 style="color: red;">Welcome to Local Community Event Portal</h1>
+
+  <!-- ID selector, section header with gradient (Exercises 3, 4) -->
+  <header id="mainHeader" class="section-header">Upcoming Events</header>
+
+  <!-- CTA Button (Exercise 2) -->
+  <button class="cta-button">Join the Next Event</button>
+
+  <!-- Event Card (Exercises 3, 4, 8) -->
+  <div class="eventCard">
+    <h2>Community Clean-Up</h2>
+    <p class="description">Join us for a neighborhood clean-up event this Saturday! All ages welcome. Supplies provided.</p>
+  </div>
+
+  <!-- Nav menu and list styles (Exercise 6) -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Table styling (Exercise 7) -->
+  <table>
+    <tr>
+      <th>Event</th>
+      <th>Date</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Clean-Up</td>
+      <td>June 1</td>
+      <td>Central Park</td>
+    </tr>
+    <tr>
+      <td>Food Drive</td>
+      <td>June 5</td>
+      <td>Community Center</td>
+    </tr>
+  </table>
+
+  <!-- Multiple columns in text (Exercise 9) -->
+  <section class="news-article">
+    <h3>Community Bulletin</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur euismod, nisl nisi consectetur nisi, euismod consectetur nisi nisi euismod.</p>
+    <p>Donec vel sapien augue. Etiam ac dictum arcu. Mauris euismod, nisi vel consectetur euismod, nisl nisi consectetur nisi.</p>
+    <p>Morbi euismod, nisi vel consectetur euismod, nisl nisi consectetur nisi, euismod consectetur nisi nisi euismod.</p>
+  </section>
+
+  <!-- Form with outline on focus (Exercise 8) -->
+  <form>
+    <input type="text" placeholder="Your name">
+    <select>
+      <option>Event Type</option>
+      <option>Clean-Up</option>
+      <option>Food Drive</option>
+    </select>
+  </form>
+
+  <!-- Visibility vs display (Exercise 8) -->
+  <div class="hide">This is hidden with display: none</div>
+  <div class="invisible">This is invisible but takes up space</div>
+
+  <!-- Instructions for Debugging (Exercise 11) -->
+  <footer style="margin-top:2rem; background:#004080; color:white; text-align:center; padding:1rem; border-radius:8px;">
+    <strong>Debug Tip:</strong> Use Chrome DevTools (F12) → Device Toolbar for responsive testing.  
+    Check the Network tab to confirm <code>styles.css</code> is loaded.
+  </footer>
+</body>
+</html>
